@@ -1,2 +1,8 @@
 <!--pages/home/home.wxml-->
-<text>首页</text>
+<view>
+  <!-- 顶部 -->
+  <view class="home-navigation">
+    <view class="home-navigation home-scanning"></view>
+    <input class="home-navigation home-search" placeholder="请输入店铺名字或编码"></input>
+  </view>
+</view>
