@@ -1,5 +1,6 @@
 <!--pages/home/home.wxml-->
 <view>
+  <nav-bar />
   <!-- 顶部 -->
   <view class="home-navigation">
     <view class="home-navigation home-scanning"></view>

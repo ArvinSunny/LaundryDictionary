@@ -1,0 +1,2 @@
+<!--components/navBar/navBar.wxml-->
+<view class="nav-bar"></view>
