@@ -9,25 +9,25 @@ Component({
        * 获取状态栏信息
        */
       try {
-        // 获取导航栏信息
+       // 胶囊信息
+        const menuObject = wx.getMenuButtonBoundingClientRect()
+        console.log(menuObject);
+        
         wx.getSystemInfo({
           success: res => {
+            console.log(res); 
+            console.log(res.statusBarHeight + menuObject.height + 2 * (menuObject.top - res.statusBarHeight));
+            
             this.setData({
               statusBarHeight: res.statusBarHeight,
-              navBar: res.screenHeight - res.windowHeight - res.statusBarHeight
+              navBar: res.statusBarHeight + menuObject.height + 2 * (menuObject.top - res.statusBarHeight)
             })
+            
+            
           }
         })
-
-        // 获取胶囊信息
-        const a = wx.getMenuButtonBoundingClientRect()
-        this.setData({
-          bounding: a.height,
-        })
-
       } catch (error) {
         console.log(error);
-
       }
     }
   },
@@ -42,7 +42,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    haveBack: false,
+    statusBarHeight: 0, // 状态栏的高度
   },
 
   /**

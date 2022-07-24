@@ -1,6 +1,8 @@
 // app.ts
 App<IAppOption>({
-  globalData: {},
-  onLaunch() {
+  globalData: {
+   
+  },
+  onLaunch: function (options) {
   },
 })

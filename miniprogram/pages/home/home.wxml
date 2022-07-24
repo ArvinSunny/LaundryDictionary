@@ -2,8 +2,30 @@
 <view>
   <nav-bar />
   <!-- 顶部 -->
-  <view class="home-navigation">
-    <view class="home-navigation home-scanning"></view>
-    <input class="home-navigation home-search" placeholder="请输入店铺名字或编码"></input>
+  <view class="home-search">
+    <image src="https://qunaerxi.oss-cn-beijing.aliyuncs.com/icon/saoyisao.png" />
+    <view class="search">
+        <icon type="search" size="18" color="" />
+        <input type="text" confirm-type="search" bindconfirm="onConfirm" value="{{value}}" placeholder="请输入关键字" />
+        <icon type="clear" size="18" bind:tap="onToggle" />
+    </view>
   </view>
+
+  <!-- 轮播图 -->
+  <swiper class="swiper">
+        <block>
+          <swiper-item>
+            <image src="https://qunaerxi.oss-cn-beijing.aliyuncs.com/icon/banner.png"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <!-- 随心应用 -->
+      <view class="myApp">
+        <text>我的随心应用</text>
+        <view class=myApp-list>
+          <!-- 三个点击图标布局 -->
+        </view>
+      </view>
+
 </view>

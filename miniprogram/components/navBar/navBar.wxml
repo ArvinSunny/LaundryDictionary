@@ -1,2 +1,2 @@
 <!--components/navBar/navBar.wxml-->
-<view class="nav-bar"></view>
+<view style="width: 100%; height: {{2 * navBar}}rpx; background:linear-gradient(0deg, #3889FF 0%, #806CFF 100%);"></view>
